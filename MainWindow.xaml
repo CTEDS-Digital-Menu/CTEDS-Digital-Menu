@@ -7,6 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TabControl>
+            <TabItem Header="Entradas">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox d:ItemsSource="{d:SampleData ItemCount=5}"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Prato principal">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox d:ItemsSource="{d:SampleData ItemCount=5}"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Sobremesas">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox d:ItemsSource="{d:SampleData ItemCount=5}"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Bebidas">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox d:ItemsSource="{d:SampleData ItemCount=5}"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
