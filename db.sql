@@ -1,0 +1,17 @@
+﻿CREATE TABLE Types(
+	ID			INTEGER PRIMARY KEY,
+	Type			VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Users(
+	ID			INTEGER PRIMARY KEY,
+	Name			VARCHAR(255) NOT NULL,
+	Price			DECIMAL(3, 2) NOT NULL,
+	Description		VARCHAR(255),
+	Type			INTEGER NOT NULL,
+	FOREIGN KEY(Type) REFERENCES Types(ID)
+);
+
+INSERT INTO Types (Type) VALUES ("Entry");
+INSERT INTO Types (Type) VALUES ("Main");
+INSERT INTO Types (Type) VALUES ("Dessert");
