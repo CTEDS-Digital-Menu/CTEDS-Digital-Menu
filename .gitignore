@@ -192,4 +192,3 @@ git_stats/*
 StyleCop.Cache
 bin
 obj
-/menu.db

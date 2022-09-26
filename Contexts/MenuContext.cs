@@ -1,29 +1,18 @@
 ﻿using CTEDSDigitalMenu.Domains;
 using Microsoft.EntityFrameworkCore;
-using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CTEDSDigitalMenu.Contexts;
-public class Context : DbContext
+public class MenuContext : DbContext
 {
-    public DbSet<ItemType> ItemTypes { get; set; }
+    public DbSet<ItemType>? ItemTypes { get; set; }
 
-    public DbSet<MenuItem> MenuItems { get; set; }
+    public DbSet<MenuItem>? MenuItems { get; set; }
 
-
-    public string path = "menu.db";
-
-    protected override void OnConfiguring(DbContextOptionsBuilder options)
+    public MenuContext(DbContextOptions<MenuContext> options) : base(options)
     {
-        string baseDir = AppDomain.CurrentDomain.BaseDirectory;
-
-        if (baseDir.Contains("bin"))
-        {
-            int index = baseDir.IndexOf("bin");
-            baseDir = baseDir.Substring(0, index);
-        }
-
-
-        options.UseSqlite($"Data Source={baseDir}\\{path}");
+        Database.EnsureCreated();
     }
 
 
@@ -76,5 +65,30 @@ public class Context : DbContext
         });
 
         base.OnModelCreating(modelBuilder);
+    }
+
+    public List<MenuItem> GetMenuItems()
+    {
+        ItemTypes?.ToList();
+
+        return MenuItems?.ToList() ?? new List<MenuItem>();
+    }
+
+    public void Create(MenuItem newMenuItem)
+    {
+        MenuItems?.Add(newMenuItem);
+
+        SaveChanges();
+    }
+
+    public void Delete(int menuItemId)
+    {
+        MenuItem? itemToRemove = MenuItems?.Find(menuItemId);
+
+        if (itemToRemove != null)
+        {
+            MenuItems?.Remove(itemToRemove);
+            SaveChanges();
+        }
     }
 }
