@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using CTEDSDigitalMenu.Controllers;
+using System.Windows;
 
 namespace CTEDSDigitalMenu
 {
@@ -7,9 +8,18 @@ namespace CTEDSDigitalMenu
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly MenuController menuController;
+
+        public MainWindow(MenuController menuController)
         {
+            this.menuController = menuController;
             InitializeComponent();
+            RenderEntries();
+        }
+
+        private void RenderEntries()
+        {
+            Entries.ItemsSource = menuController.GetMenuItems();
         }
     }
 }

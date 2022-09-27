@@ -1,7 +1,5 @@
-﻿using CTEDSDigitalMenu.Domains;
+﻿using CTEDSDigitalMenu.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace CTEDSDigitalMenu.Contexts;
 public class MenuContext : DbContext
@@ -14,8 +12,6 @@ public class MenuContext : DbContext
     {
         Database.EnsureCreated();
     }
-
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ItemType>().HasData(
@@ -65,30 +61,5 @@ public class MenuContext : DbContext
         });
 
         base.OnModelCreating(modelBuilder);
-    }
-
-    public List<MenuItem> GetMenuItems()
-    {
-        ItemTypes?.ToList();
-
-        return MenuItems?.ToList() ?? new List<MenuItem>();
-    }
-
-    public void Create(MenuItem newMenuItem)
-    {
-        MenuItems?.Add(newMenuItem);
-
-        SaveChanges();
-    }
-
-    public void Delete(int menuItemId)
-    {
-        MenuItem? itemToRemove = MenuItems?.Find(menuItemId);
-
-        if (itemToRemove != null)
-        {
-            MenuItems?.Remove(itemToRemove);
-            SaveChanges();
-        }
     }
 }

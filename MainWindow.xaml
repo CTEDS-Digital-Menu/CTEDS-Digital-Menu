@@ -10,12 +10,34 @@
         <TabControl>
             <TabItem Header="Entradas">
                 <Grid Background="#FFE5E5E5">
-                    <ListBox d:ItemsSource="{d:SampleData ItemCount=5}"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <DataGrid Name="Entries" AutoGenerateColumns="False" IsReadOnly="True"
+                    Grid.Row="0" ColumnWidth="*" Margin="5,5,5,5" IsSynchronizedWithCurrentItem="True" Grid.ColumnSpan="3">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding MenuItemId}"/>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                            <DataGridTextColumn Header="Price" Binding="{Binding Price}"/>
+                            <DataGridTextColumn Header="Type Id" Binding="{Binding ItemTypeId}"/>
+                            <DataGridTextColumn Header="Type" Binding="{Binding ItemType.Name}"/>
+                            <DataGridTextColumn Header="PhotoPath" Binding="{Binding PhotoPath}"/>
+
+                            <DataGridTemplateColumn Header="Edit Product">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Edit"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </Grid>
             </TabItem>
             <TabItem Header="Prato principal">
                 <Grid Background="#FFE5E5E5">
-                    <ListBox d:ItemsSource="{d:SampleData ItemCount=5}"/>
+                    <Viewbox/>
                 </Grid>
             </TabItem>
             <TabItem Header="Sobremesas">

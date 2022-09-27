@@ -1,7 +1,7 @@
 ﻿using CTEDSDigitalMenu.Contexts;
+using CTEDSDigitalMenu.Controllers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System.Diagnostics;
 using System.Windows;
 
 namespace CTEDSDigitalMenu;
@@ -22,16 +22,9 @@ public partial class App : Application
 			options.UseSqlite("Data source = menu.db");
 		});
 
-		services.AddSingleton<MainWindow>();
-
+		services.AddSingleton<MenuController>(x => new MenuController(x.GetService<MenuContext>()));
+		services.AddSingleton<MainWindow>(x => new MainWindow(x.GetService<MenuController>()));
 		serviceProvider = services.BuildServiceProvider();
-
-		var menuItems = serviceProvider.GetService<MenuContext>().GetMenuItems();
-
-		foreach (var item in menuItems)
-		{
-			Debug.WriteLine($"{item.MenuItemId} {item.Name} {item.Price} {item.Description} {item.ItemTypeId} {item.ItemType?.Name}");
-		}
 	}
 
 	private void OnStartup(object s, StartupEventArgs e)
