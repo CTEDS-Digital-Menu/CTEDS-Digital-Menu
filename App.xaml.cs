@@ -1,5 +1,4 @@
 ﻿using CTEDSDigitalMenu.Contexts;
-using CTEDSDigitalMenu.Domains;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics;
@@ -27,15 +26,12 @@ public partial class App : Application
 
 		serviceProvider = services.BuildServiceProvider();
 
-		var menuItems = serviceProvider.GetService<MenuContext>()?.GetMenuItems() ?? new System.Collections.Generic.List<MenuItem>();
-
-
+		var menuItems = serviceProvider.GetService<MenuContext>().GetMenuItems();
 
 		foreach (var item in menuItems)
 		{
 			Debug.WriteLine($"{item.MenuItemId} {item.Name} {item.Price} {item.Description} {item.ItemTypeId} {item.ItemType?.Name}");
 		}
-
 	}
 
 	private void OnStartup(object s, StartupEventArgs e)

@@ -8,5 +8,5 @@ public class ItemType
 
     public string? Name { get; set; }
 
-    public ICollection<MenuItem> MenuItems { get; set; }
+    public ICollection<MenuItem>? MenuItems { get; set; }
 }

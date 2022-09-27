@@ -22,17 +22,17 @@ public class MenuContext : DbContext
         new ItemType
         {
             ItemTypeId = 1,
-            Name = "Entry"
+            Name = "Entrada"
         },
         new ItemType
         {
             ItemTypeId = 2,
-            Name = "Main"
+            Name = "Principal"
         },
         new ItemType
         {
             ItemTypeId = 3,
-            Name = "Dessert"
+            Name = "Sobremesa"
         });
 
         modelBuilder.Entity<MenuItem>(entity =>
