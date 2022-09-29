@@ -8,6 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\brigadeiro_de_colher.jpeg" />
+    <None Remove="Assets\brigadeiro_de_colher.jpg" />
+    <None Remove="Assets\casquinha_de_siri.jpg" />
+    <None Remove="Assets\moqueca_de_camarão.jpeg" />
+    <None Remove="Assets\moqueca_de_camarão.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\brigadeiro_de_colher.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\casquinha_de_siri.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\moqueca_de_camarão.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
       <PrivateAssets>all</PrivateAssets>
