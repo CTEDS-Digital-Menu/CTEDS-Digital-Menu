@@ -11,8 +11,17 @@
     <None Remove="Assets\brigadeiro_de_colher.jpeg" />
     <None Remove="Assets\brigadeiro_de_colher.jpg" />
     <None Remove="Assets\casquinha_de_siri.jpg" />
+    <None Remove="Assets\cerveja.jpg" />
+    <None Remove="Assets\chá.jpg" />
+    <None Remove="Assets\creme_de_abobora.jpg" />
     <None Remove="Assets\moqueca_de_camarão.jpeg" />
     <None Remove="Assets\moqueca_de_camarão.jpg" />
+    <None Remove="Assets\mousse.jpg" />
+    <None Remove="Assets\picanha_assada.jpg" />
+    <None Remove="Assets\pudim.jpg" />
+    <None Remove="Assets\refrigerante.jpg" />
+    <None Remove="Assets\salada_caesar.jpg" />
+    <None Remove="Assets\tabua_de_frios.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +31,34 @@
     <Resource Include="Assets\casquinha_de_siri.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\cerveja.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\chá.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\creme_de_abobora.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\moqueca_de_camarão.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\mousse.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\picanha_assada.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\pudim.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\refrigerante.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\salada_caesar.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\tabua_de_frios.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
