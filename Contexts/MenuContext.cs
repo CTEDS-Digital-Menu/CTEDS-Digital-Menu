@@ -29,6 +29,11 @@ public class MenuContext : DbContext
         {
             ItemTypeId = 3,
             Name = "Sobremesa"
+        },
+        new ItemType
+        {
+            ItemTypeId = 4,
+            Name = "Bebida"
         });
 
         modelBuilder.Entity<MenuItem>(entity =>
@@ -60,6 +65,79 @@ public class MenuContext : DbContext
                     PhotoPath = "/Assets/brigadeiro_de_colher.jpg",
                     Description = "Brigadeiro cremoso de colher com farofa de paçoca",
                     ItemTypeId = 3
+                },
+                new MenuItem
+                {
+                    MenuItemId = 4,
+                    Name = "Creme de Abóbora",
+                    Price = 18.99,
+                    PhotoPath = "/Assets/creme_de_abobora.jpg",
+                    Description = "Delicioso creme de abóbora com sementes e um toque de gengibre. Acompanha pão de alho crocante.",
+                    ItemTypeId = 1
+                }, new MenuItem
+                {
+                    MenuItemId = 5,
+                    Name = "Tábua de Frios",
+                    Price = 39.99,
+                    PhotoPath = "/Assets/tabua_de_frios.jpg",
+                    Description = "Tábua de frios para compartilhar! Inclui salames, queijos e embutidos.",
+                    ItemTypeId = 1
+                }, new MenuItem
+                {
+                    MenuItemId = 6,
+                    Name = "Picanha Assada",
+                    Price = 63.99,
+                    PhotoPath = "/Assets/picanha_assada.jpg",
+                    Description = "Picanha Assada na grelha no ponto escolhido! Acompanha farofa e vinagrete.",
+                    ItemTypeId = 2
+                }, new MenuItem
+                {
+                    MenuItemId = 7,
+                    Name = "Salada Caesar",
+                    Price = 43.99,
+                    PhotoPath = "/Assets/salada_caesar.jpg",
+                    Description = "Deliciosa Salada Caesar com tiras de peito de frango e queijo parmesão ralado.",
+                    ItemTypeId = 2
+                }, new MenuItem
+                {
+                    MenuItemId = 8,
+                    Name = "Pudim",
+                    Price = 22.99,
+                    PhotoPath = "/Assets/pudim.jpg",
+                    Description = "Delicioso pudim de leite com baunilha e calda de caramelo.",
+                    ItemTypeId = 3
+                }, new MenuItem
+                {
+                    MenuItemId = 9,
+                    Name = "Mousse de Chocolate",
+                    Price = 19.99,
+                    PhotoPath = "/Assets/mousse.jpg",
+                    Description = "Mousse de chocolate leve e aerado.",
+                    ItemTypeId = 3
+                }, new MenuItem
+                {
+                    MenuItemId = 10,
+                    Name = "Refrigerante Refill",
+                    Price = 14.99,
+                    PhotoPath = "/Assets/refrigerante.jpg",
+                    Description = "Refill de refrigerante para beber à vontade!",
+                    ItemTypeId = 4
+                }, new MenuItem
+                {
+                    MenuItemId = 11,
+                    Name = "Chá Gelado Refill",
+                    Price = 14.99,
+                    PhotoPath = "/Assets/chá.jpg",
+                    Description = "Refill de chá gelado para beber à vontade!",
+                    ItemTypeId = 4
+                }, new MenuItem
+                {
+                    MenuItemId = 12,
+                    Name = "Chopp",
+                    Price = 16.99,
+                    PhotoPath = "/Assets/cerveja.jpg",
+                    Description = "Chopp bem gelado!",
+                    ItemTypeId = 4
                 });
         });
 
