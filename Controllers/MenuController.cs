@@ -20,6 +20,13 @@ namespace CTEDSDigitalMenu.Controllers
             return menuContext.MenuItems?.ToList() ?? new List<MenuItem>();
         }
 
+        public List<MenuItem> GetMenuItemsPerType(string itemtypename)
+        {
+            menuContext.ItemTypes?.ToList();
+
+            return menuContext.MenuItems?.Where(item => item.ItemType.Name == itemtypename).ToList() ?? new List<MenuItem>();
+        }
+
         public void Create(MenuItem newMenuItem)
         {
             menuContext.MenuItems?.Add(newMenuItem);

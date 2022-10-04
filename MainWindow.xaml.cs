@@ -15,16 +15,26 @@ namespace CTEDSDigitalMenu
             this.menuController = menuController;
             InitializeComponent();
             RenderEntries();
+            RenderMain();
             RenderDesserts();
+            RenderDrinks();
         }
 
         private void RenderEntries()
         {
-            Entries.ItemsSource = menuController.GetMenuItems();
+            ListBoxEntries.ItemsSource = menuController.GetMenuItemsPerType("Entrada");
+        }
+        private void RenderMain()
+        {
+            ListBoxMain.ItemsSource = menuController.GetMenuItemsPerType("Principal");
         }
         private void RenderDesserts()
         {
-            ListBoxDesserts.ItemsSource = menuController.GetMenuItems();
+            ListBoxDesserts.ItemsSource = menuController.GetMenuItemsPerType("Sobremesa");
+        }
+        private void RenderDrinks()
+        {
+            ListBoxDrinks.ItemsSource = menuController.GetMenuItemsPerType("Bebida");
         }
     }
 }
