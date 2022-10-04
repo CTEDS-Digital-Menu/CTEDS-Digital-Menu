@@ -6,8 +6,17 @@
         xmlns:local="clr-namespace:CTEDSDigitalMenu"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <Control.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Views/MenuItem.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Control.Resources>
+
     <Grid>
-        <TabControl>
+                <TabControl>
             <TabItem Header="Entradas">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
@@ -95,32 +104,12 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Sobremesas">
-                <ListBox Margin="8" ScrollViewer.CanContentScroll="False" Name="ListBoxDesserts">
+                <ListBox Margin="8" ScrollViewer.CanContentScroll="False" Name="ListBoxDesserts" ItemTemplate="{StaticResource MenuItemTemplate}">
                     <ListBox.ItemContainerStyle>
                         <Style TargetType="ListBoxItem">
                             <Setter Property="HorizontalContentAlignment" Value="Stretch" />
                         </Style>
                     </ListBox.ItemContainerStyle>
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <StackPanel Grid.Row="0">
-                                    <TextBlock Margin="5" FontSize="22" Text="{Binding Path=Name}" FontWeight="Bold" TextAlignment="Center"/>
-                                    <Image MaxHeight="300" Source="{Binding Path=PhotoPath}" Margin="5"/>
-                                </StackPanel>
-                                <TextBlock TextWrapping="Wrap" Grid.Column="1" Text="{Binding Path=Description}" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center"/>
-                                <TextBlock Grid.Column="2" Margin="5" Text="{Binding Path=Price}" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
-                            </Grid>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
                 </ListBox>
             </TabItem>
             <TabItem Header="Bebidas">
