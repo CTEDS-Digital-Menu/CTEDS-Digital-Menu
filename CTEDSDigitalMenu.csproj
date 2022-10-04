@@ -14,6 +14,7 @@
     <None Remove="Assets\cerveja.jpg" />
     <None Remove="Assets\chá.jpg" />
     <None Remove="Assets\creme_de_abobora.jpg" />
+    <None Remove="Assets\icon.png" />
     <None Remove="Assets\moqueca_de_camarão.jpeg" />
     <None Remove="Assets\moqueca_de_camarão.jpg" />
     <None Remove="Assets\mousse.jpg" />
@@ -38,6 +39,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\creme_de_abobora.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\moqueca_de_camarão.jpg">
