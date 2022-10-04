@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CTEDSDigitalMenu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="CTEDS Menu Digital" Height="450" Width="800">
 
     <Control.Resources>
         <ResourceDictionary>
@@ -16,106 +16,38 @@
     </Control.Resources>
 
     <Grid>
-                <TabControl>
+        <TabControl>
             <TabItem Header="Entradas">
-                <Grid Background="#FFE5E5E5">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <DataGrid Name="Entries" AutoGenerateColumns="False" IsReadOnly="True"
-                    Grid.Row="0" ColumnWidth="*" Margin="5,5,5,5" IsSynchronizedWithCurrentItem="True" Grid.ColumnSpan="3">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" Binding="{Binding MenuItemId}"/>
-                            <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
-                            <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
-                            <DataGridTextColumn Header="Price" Binding="{Binding Price}"/>
-                            <DataGridTextColumn Header="Type Id" Binding="{Binding ItemTypeId}"/>
-                            <DataGridTextColumn Header="Type" Binding="{Binding ItemType.Name}"/>
-                            <DataGridTextColumn Header="PhotoPath" Binding="{Binding PhotoPath}"/>
-
-                            <DataGridTemplateColumn Header="Edit Product">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Button Content="Edit"/>
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </Grid>
+                <ListBox 
+                    Margin="8" 
+                    ScrollViewer.CanContentScroll="False" 
+                    Name="ListBoxEntries" 
+                    ItemContainerStyle="{StaticResource ItemContainer}" 
+                    ItemTemplate="{StaticResource MenuItemTemplate}"/>
             </TabItem>
             <TabItem Header="Prato principal">
-                <Grid Background="#FFE5E5E5">
-                    <ListBox Margin="8" ScrollViewer.CanContentScroll="False">
-                        <ListBox.ItemContainerStyle>
-                            <Style TargetType="ListBoxItem">
-                                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                            </Style>
-                        </ListBox.ItemContainerStyle>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <StackPanel Grid.Row="0">
-                                <TextBlock Margin="5" FontSize="22" Text="Casquinha de Siri 1" FontWeight="Bold" TextAlignment="Center"/>
-                                <Image MaxHeight="300" Source="/Assets/casquinha_de_siri.jpg" Margin="5"/>
-                            </StackPanel>
-                            <TextBlock TextWrapping="Wrap" Grid.Column="1" Text="Siri desfiado e temperado servido em sua casca" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock Grid.Column="2" Margin="5" Text="R$ 2305,90" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
-                        </Grid>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <StackPanel Grid.Row="0">
-                                <TextBlock Margin="5" FontSize="22" Text="Casquinha de Siri 2" FontWeight="Bold" TextAlignment="Center"/>
-                                <Image MaxHeight="300" Source="/Assets/brigadeiro_de_colher.jpg" Margin="5"/>
-                            </StackPanel>
-                            <TextBlock TextWrapping="Wrap" Grid.Column="1" Text="Siri desfiado e temperado servido em sua casca" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock Grid.Column="2" Margin="5" Text="R$ 2305,90" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
-                        </Grid>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <StackPanel Grid.Row="0">
-                                <TextBlock Margin="5" FontSize="22" Text="Casquinha de Siri 3" FontWeight="Bold" TextAlignment="Center"/>
-                                <Image MaxHeight="300" Source="/Assets/casquinha_de_siri.jpg" Margin="5"/>
-                            </StackPanel>
-                            <TextBlock TextWrapping="Wrap" Grid.Column="1" Text="Siri desfiado e temperado servido em sua casca" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center"/>
-                            <TextBlock Grid.Column="2" Margin="5" Text="R$ 2305,90" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
-                        </Grid>
-                    </ListBox>
-                </Grid>
+                <ListBox 
+                    Margin="8" 
+                    ScrollViewer.CanContentScroll="False" 
+                    Name="ListBoxMain" 
+                    ItemContainerStyle="{StaticResource ItemContainer}" 
+                    ItemTemplate="{StaticResource MenuItemTemplate}"/>
             </TabItem>
             <TabItem Header="Sobremesas">
-                <ListBox Margin="8" ScrollViewer.CanContentScroll="False" Name="ListBoxDesserts" ItemTemplate="{StaticResource MenuItemTemplate}">
-                    <ListBox.ItemContainerStyle>
-                        <Style TargetType="ListBoxItem">
-                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                        </Style>
-                    </ListBox.ItemContainerStyle>
-                </ListBox>
+                <ListBox 
+                    Margin="8" 
+                    ScrollViewer.CanContentScroll="False" 
+                    Name="ListBoxDesserts" 
+                    ItemContainerStyle="{StaticResource ItemContainer}" 
+                    ItemTemplate="{StaticResource MenuItemTemplate}"/>
             </TabItem>
             <TabItem Header="Bebidas">
-                <Grid Background="#FFE5E5E5">
-                    <ListBox d:ItemsSource="{d:SampleData ItemCount=5}"/>
-                </Grid>
+                <ListBox 
+                    Margin="8" 
+                    ScrollViewer.CanContentScroll="False" 
+                    Name="ListBoxDrinks" 
+                    ItemContainerStyle="{StaticResource ItemContainer}" 
+                    ItemTemplate="{StaticResource MenuItemTemplate}"/>
             </TabItem>
         </TabControl>
     </Grid>
