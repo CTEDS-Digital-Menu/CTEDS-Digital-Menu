@@ -41,7 +41,6 @@ public class MenuContext : DbContext
             entity.HasData(
                 new MenuItem
                 {
-                    MenuItemId = 1,
                     Name = "Casquinha de Siri",
                     Price = 23.99,
                     PhotoPath = "/Assets/casquinha_de_siri.jpg",
@@ -50,7 +49,6 @@ public class MenuContext : DbContext
                 },
                 new MenuItem
                 {
-                    MenuItemId = 2,
                     Name = "Moqueca de Camarão",
                     Price = 54.99,
                     PhotoPath = "/Assets/moqueca_de_camarão.jpg",
@@ -59,7 +57,6 @@ public class MenuContext : DbContext
                 },
                 new MenuItem
                 {
-                    MenuItemId = 3,
                     Name = "Brigadeiro de Colher",
                     Price = 18.99,
                     PhotoPath = "/Assets/brigadeiro_de_colher.jpg",
@@ -68,7 +65,6 @@ public class MenuContext : DbContext
                 },
                 new MenuItem
                 {
-                    MenuItemId = 4,
                     Name = "Creme de Abóbora",
                     Price = 18.99,
                     PhotoPath = "/Assets/creme_de_abobora.jpg",
@@ -76,7 +72,6 @@ public class MenuContext : DbContext
                     ItemTypeId = 1
                 }, new MenuItem
                 {
-                    MenuItemId = 5,
                     Name = "Tábua de Frios",
                     Price = 39.99,
                     PhotoPath = "/Assets/tabua_de_frios.jpg",
@@ -84,7 +79,6 @@ public class MenuContext : DbContext
                     ItemTypeId = 1
                 }, new MenuItem
                 {
-                    MenuItemId = 6,
                     Name = "Picanha Assada",
                     Price = 63.99,
                     PhotoPath = "/Assets/picanha_assada.jpg",
@@ -92,7 +86,6 @@ public class MenuContext : DbContext
                     ItemTypeId = 2
                 }, new MenuItem
                 {
-                    MenuItemId = 7,
                     Name = "Salada Caesar",
                     Price = 43.99,
                     PhotoPath = "/Assets/salada_caesar.jpg",
@@ -100,7 +93,6 @@ public class MenuContext : DbContext
                     ItemTypeId = 2
                 }, new MenuItem
                 {
-                    MenuItemId = 8,
                     Name = "Pudim",
                     Price = 22.99,
                     PhotoPath = "/Assets/pudim.jpg",
@@ -108,7 +100,6 @@ public class MenuContext : DbContext
                     ItemTypeId = 3
                 }, new MenuItem
                 {
-                    MenuItemId = 9,
                     Name = "Mousse de Chocolate",
                     Price = 19.99,
                     PhotoPath = "/Assets/mousse.jpg",
@@ -116,7 +107,6 @@ public class MenuContext : DbContext
                     ItemTypeId = 3
                 }, new MenuItem
                 {
-                    MenuItemId = 10,
                     Name = "Refrigerante Refill",
                     Price = 14.99,
                     PhotoPath = "/Assets/refrigerante.jpg",
@@ -124,7 +114,6 @@ public class MenuContext : DbContext
                     ItemTypeId = 4
                 }, new MenuItem
                 {
-                    MenuItemId = 11,
                     Name = "Chá Gelado Refill",
                     Price = 14.99,
                     PhotoPath = "/Assets/chá.jpg",
@@ -132,7 +121,6 @@ public class MenuContext : DbContext
                     ItemTypeId = 4
                 }, new MenuItem
                 {
-                    MenuItemId = 12,
                     Name = "Chopp",
                     Price = 16.99,
                     PhotoPath = "/Assets/cerveja.jpg",

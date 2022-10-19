@@ -1,8 +1,9 @@
-﻿namespace CTEDSDigitalMenu.Models;
+﻿using System;
+namespace CTEDSDigitalMenu.Models;
 
 public class MenuItem
 {
-    public int MenuItemId { get; set; }
+    public Guid MenuItemId { get; set; } = Guid.NewGuid();
 
     public string Name { get; set; } = string.Empty;
 

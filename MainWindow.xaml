@@ -5,23 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CTEDSDigitalMenu"
         mc:Ignorable="d"
-        Title="CTEDS Menu Digital" Height="450" Width="800"
+        Title="CTEDS Menu Digital" Height="450" Width="1080"
         Icon="Assets\icon.png">
-        
+
 
     <Control.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Views/MenuItem.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="ItemContainer" TargetType="ListBoxItem">
+                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+            </Style>
         </ResourceDictionary>
     </Control.Resources>
-
+    
     <Grid>
         <TabControl>
             <TabItem Header="Entradas">
                 <ListBox 
                     Margin="8" 
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                     ScrollViewer.CanContentScroll="False" 
                     Name="ListBoxEntries" 
                     ItemContainerStyle="{StaticResource ItemContainer}" 
@@ -30,6 +35,7 @@
             <TabItem Header="Prato principal">
                 <ListBox 
                     Margin="8" 
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                     ScrollViewer.CanContentScroll="False" 
                     Name="ListBoxMain" 
                     ItemContainerStyle="{StaticResource ItemContainer}" 
@@ -38,6 +44,7 @@
             <TabItem Header="Sobremesas">
                 <ListBox 
                     Margin="8" 
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                     ScrollViewer.CanContentScroll="False" 
                     Name="ListBoxDesserts" 
                     ItemContainerStyle="{StaticResource ItemContainer}" 
@@ -46,11 +53,15 @@
             <TabItem Header="Bebidas">
                 <ListBox 
                     Margin="8" 
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                     ScrollViewer.CanContentScroll="False" 
                     Name="ListBoxDrinks" 
                     ItemContainerStyle="{StaticResource ItemContainer}" 
                     ItemTemplate="{StaticResource MenuItemTemplate}"/>
             </TabItem>
         </TabControl>
+        <Canvas>
+            <Button Canvas.Top="6" Canvas.Right="20" Click="Button_Click">Adicionar produto</Button>
+        </Canvas>
     </Grid>
 </Window>
