@@ -25,7 +25,7 @@
         <TabControl>
             <TabItem Header="Entradas">
                 <ListBox 
-                    Margin="8" 
+                    Margin="8 8 8 25" 
                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                     ScrollViewer.CanContentScroll="False" 
                     Name="ListBoxEntries" 
@@ -34,7 +34,7 @@
             </TabItem>
             <TabItem Header="Prato principal">
                 <ListBox 
-                    Margin="8" 
+                    Margin="8 8 8 25" 
                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                     ScrollViewer.CanContentScroll="False" 
                     Name="ListBoxMain" 
@@ -43,7 +43,7 @@
             </TabItem>
             <TabItem Header="Sobremesas">
                 <ListBox 
-                    Margin="8" 
+                    Margin="8 8 8 25" 
                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                     ScrollViewer.CanContentScroll="False" 
                     Name="ListBoxDesserts" 
@@ -52,7 +52,7 @@
             </TabItem>
             <TabItem Header="Bebidas">
                 <ListBox 
-                    Margin="8" 
+                    Margin="8 8 8 25" 
                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                     ScrollViewer.CanContentScroll="False" 
                     Name="ListBoxDrinks" 
@@ -62,6 +62,9 @@
         </TabControl>
         <Canvas>
             <Button Canvas.Top="6" Canvas.Right="20" Click="Button_Click">Adicionar produto</Button>
+        </Canvas>
+        <Canvas>
+            <TextBlock Name="ServerURI" Canvas.Bottom="6" Canvas.Left="20"/>
         </Canvas>
     </Grid>
 </Window>
