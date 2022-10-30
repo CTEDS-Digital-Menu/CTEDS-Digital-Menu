@@ -12,11 +12,11 @@
     <None Remove="Assets\brigadeiro_de_colher.jpg" />
     <None Remove="Assets\casquinha_de_siri.jpg" />
     <None Remove="Assets\cerveja.jpg" />
-    <None Remove="Assets\chá.jpg" />
+    <None Remove="Assets\cha.jpg" />
     <None Remove="Assets\creme_de_abobora.jpg" />
     <None Remove="Assets\icon.png" />
+    <None Remove="Assets\moqueca_de_camarao.jpg" />
     <None Remove="Assets\moqueca_de_camarão.jpeg" />
-    <None Remove="Assets\moqueca_de_camarão.jpg" />
     <None Remove="Assets\mousse.jpg" />
     <None Remove="Assets\picanha_assada.jpg" />
     <None Remove="Assets\pudim.jpg" />
@@ -35,7 +35,7 @@
     <Resource Include="Assets\cerveja.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\chá.jpg">
+    <Resource Include="Assets\cha.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\creme_de_abobora.jpg">
@@ -44,7 +44,7 @@
     <Resource Include="Assets\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\moqueca_de_camarão.jpg">
+    <Resource Include="Assets\moqueca_de_camarao.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\mousse.jpg">
@@ -79,6 +79,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Simple-HTTP" Version="1.0.6" />
   </ItemGroup>
 
   <ItemGroup>

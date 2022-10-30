@@ -51,7 +51,7 @@ public class MenuContext : DbContext
                 {
                     Name = "Moqueca de Camarão",
                     Price = 54.99,
-                    PhotoPath = "/Assets/moqueca_de_camarão.jpg",
+                    PhotoPath = "/Assets/moqueca_de_camarao.jpg",
                     Description = "Camarões refogados com leite de coco, pimentões, tomates e cebola",
                     ItemTypeId = 2
                 },
@@ -116,7 +116,7 @@ public class MenuContext : DbContext
                 {
                     Name = "Chá Gelado Refill",
                     Price = 14.99,
-                    PhotoPath = "/Assets/chá.jpg",
+                    PhotoPath = "/Assets/cha.jpg",
                     Description = "Refill de chá gelado para beber à vontade!",
                     ItemTypeId = 4
                 }, new MenuItem
