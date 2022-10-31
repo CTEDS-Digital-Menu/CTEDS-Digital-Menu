@@ -40,13 +40,8 @@ namespace CTEDSDigitalMenu.Controllers
 
         public void Delete(MenuItem menuItem)
         {
-            MenuItem? itemToRemove = menuContext.MenuItems?.Find(menuItem);
-
-            if (itemToRemove != null)
-            {
-                menuContext.MenuItems?.Remove(itemToRemove);
-                menuContext.SaveChanges();
-            }
+            menuContext.MenuItems?.Remove(menuItem);
+            menuContext.SaveChanges();
         }
 
         public void Update(MenuItem menuItem)

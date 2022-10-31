@@ -23,8 +23,8 @@ namespace CTEDSDigitalMenu.Views
         private void Button_Update(object sender, RoutedEventArgs e)
         {
             menuController.Update(selectedItem);
-            MessageBox.Show("Produto editado com sucesso");
             this.Close();
+            MessageBox.Show("Produto editado com sucesso");
             ((MainWindow)System.Windows.Application.Current.MainWindow).ReRenderByType(selectedItem);
 
         }
@@ -33,8 +33,8 @@ namespace CTEDSDigitalMenu.Views
             if (MessageBox.Show("Confirme para deletar item: " + selectedItem.Name, "Deletar", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 menuController.Delete(selectedItem);
-                MessageBox.Show("Produto deletado com sucesso");
                 this.Close();
+                MessageBox.Show("Produto deletado com sucesso");
                 ((MainWindow)System.Windows.Application.Current.MainWindow).ReRenderByType(selectedItem);
             }
         }
